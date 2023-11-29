@@ -1,0 +1,106 @@
+[debug] [2023-11-27T07:00:14.245Z] ----------------------------------------------------------------------
+[debug] [2023-11-27T07:00:14.246Z] Command:       /home/patri/.nvm/versions/node/v16.20.2/bin/node /home/patri/.nvm/versions/node/v16.20.2/bin/firebase deploy --debug
+[debug] [2023-11-27T07:00:14.246Z] CLI Version:   12.9.1
+[debug] [2023-11-27T07:00:14.246Z] Platform:      linux
+[debug] [2023-11-27T07:00:14.246Z] Node Version:  v16.20.2
+[debug] [2023-11-27T07:00:14.247Z] Time:          Mon Nov 27 2023 08:00:14 GMT+0100 (hora estándar de Europa central)
+[debug] [2023-11-27T07:00:14.247Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-27T07:00:14.282Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-27T07:00:14.283Z] > authorizing via signed-in user (patricia@zapp-studio.com)
+[debug] [2023-11-27T07:00:14.283Z] [iam] checking project vue-http-course-fd7d3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-27T07:00:14.284Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-http-course-fd7d3:testIamPermissions [none]
+[debug] [2023-11-27T07:00:14.284Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-http-course-fd7d3:testIamPermissions x-goog-quota-user=projects/vue-http-course-fd7d3
+[debug] [2023-11-27T07:00:14.284Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-http-course-fd7d3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-27T07:00:15.028Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-http-course-fd7d3:testIamPermissions 200
+[debug] [2023-11-27T07:00:15.029Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vue-http-course-fd7d3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-27T07:00:15.030Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vue-http-course-fd7d3 [none]
+[debug] [2023-11-27T07:00:15.420Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vue-http-course-fd7d3 200
+[debug] [2023-11-27T07:00:15.420Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vue-http-course-fd7d3 {"projectId":"vue-http-course-fd7d3","projectNumber":"204299967612","displayName":"vue-http-course","name":"projects/vue-http-course-fd7d3","resources":{"hostingSite":"vue-http-course-fd7d3","realtimeDatabaseInstance":"vue-http-course-fd7d3-default-rtdb"},"state":"ACTIVE","etag":"1_55849988-9b7a-4842-a2d8-8a0f403f45bf"}
+[info] 
+[info] === Deploying to 'vue-http-course-fd7d3'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-27T07:00:15.428Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions [none]
+[debug] [2023-11-27T07:00:15.428Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-11-27T07:00:16.961Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions 200
+[debug] [2023-11-27T07:00:16.962Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions {"name":"projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[vue-http-course-fd7d3]: beginning deploy... 
+[info] i  hosting[vue-http-course-fd7d3]: found 24 files in dist 
+[debug] [2023-11-27T07:00:16.972Z] [hosting] uploading with 200 concurrency
+[debug] [2023-11-27T07:00:16.974Z] [hosting] hash cache [ZGlzdA] stored for 24 files
+[debug] [2023-11-27T07:00:16.974Z] [hosting][hash queue][FINAL] {"max":0,"min":0,"avg":0,"active":0,"complete":24,"success":24,"errored":0,"retried":0,"total":24,"elapsed":1}
+[debug] [2023-11-27T07:00:16.974Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338:populateFiles [none]
+[debug] [2023-11-27T07:00:16.974Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338:populateFiles {"files":{"/favicon.ico":"e0535b2041a7a1721cdec785c903980d41fdf0d810a4ea9726b6ffd1371bbc28","/index.html":"869acd38d338ed07bccef41270a4b6b01e4f73ae5f4b11315760d85c57e71913","/css/app.9e36ec45.css":"54313401cf077101468689db1b2fc0fb1364e9fdf8d0a268f1d9f6a0938ceb28","/css/chunk-33dec5b7.af76c2ea.css":"e72f4ef1311d1e657b25837218d93e620ca49b5cd4961fe2fd7c9bd0ce619de9","/css/chunk-4535507d.5c672ffe.css":"198f11ac480acbad13ce7c34b38d92a1b48d2ba3358e2c6eb85f6be57f679a66","/css/chunk-5f86c051.efdc4532.css":"f74f1c0c07c399fbc7ce43c3ffe03212bcb31db6962ffa46a36c88b055d889e6","/css/chunk-7a66b1f4.0d124937.css":"933c9d1bd28ec25fa6dc15fd56f2bf41886075a92601505a9d9e6e20b611f1ff","/css/chunk-b88f66a0.c5035695.css":"fb1f4b4b66f1951e4de234d100fbb10ab28da6a297cf02cb11c17bc40c0c614e","/js/app.cb1619bc.js":"51f906d23596c752b8d0d4398dd264ab0e9158777fa0ef586a5410957837cc40","/js/app.cb1619bc.js.map":"49e9517162025fa4beab6f9e440ee7828fd62628805d6561d84ac352ce7e8b48","/js/chunk-2d0c94ec.034cc3e7.js":"928b54e2ff04828807b2b3196c303132e93121f5c65b1f4bfa2c937a718516ac","/js/chunk-2d0c94ec.034cc3e7.js.map":"a5c3a0550973e91c0eb729a909f6a0a5b7a1f84d4389589c4413c06d89efd40a","/js/chunk-33dec5b7.019c1b56.js":"b3173a80fdc9a77aebbf956e5b9e4784f06dcba6d318a5b0e35e66f5535cc488","/js/chunk-33dec5b7.019c1b56.js.map":"e9d47e64e99a40b21a4687863be97f25d583d797d681b74fa21ef630f6e0bd3e","/js/chunk-4535507d.94621fee.js":"57718828be6d87cee4c2fb6407774a8d01f962ddc467bea17b38bcae5c3fc958","/js/chunk-4535507d.94621fee.js.map":"d0afc1d751d9020cc058f0b6b232f6f8453fb7beed5d0dd57ae0506701d5ac36","/js/chunk-5f86c051.c274b61c.js":"43de186f78040540a6f72adb8e2bb41e97c5ae53b13ca3bc4beb6116ff9647ce","/js/chunk-5f86c051.c274b61c.js.map":"dd4554f519e911c028058a4138e006c045ec3eff6c578f9c11551a76bb493604","/js/chunk-7a66b1f4.37aa1ad1.js":"2bf1942db357ba646be71df48a02409bbf24c5c85014e9fb4b3b73d93d47ccac","/js/chunk-7a66b1f4.37aa1ad1.js.map":"9756d908105dc4fa92f1613a63434393fcd58f081522d9882872dc3019dc3642","/js/chunk-b88f66a0.ffc55d0d.js":"70e49c63984ce2dab3b7561fd346355fa22b4d1d125522dd9c2b1d6671ba4cda","/js/chunk-b88f66a0.ffc55d0d.js.map":"8901d4bc7711ec775130a5e86d5fd9b1d06cd6f4c7b26e0706f3bac1061d516a","/js/chunk-vendors.66c61abc.js":"1787cd00cefe11e6fb63fb67af2f6844972a8043d0dba50d617adbe28e5a1194","/js/chunk-vendors.66c61abc.js.map":"b6440e81975651a509c6e3ec0861ca30c99a4ac0c8943e9e0111140c9debb46e"}}
+[debug] [2023-11-27T07:00:18.092Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338:populateFiles 200
+[debug] [2023-11-27T07:00:18.093Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/vue-http-course-fd7d3/versions/205b6128e60c0338/files"}
+[debug] [2023-11-27T07:00:18.093Z] [hosting][populate queue][FINAL] {"max":1120,"min":1120,"avg":1120,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1120}
+[debug] [2023-11-27T07:00:18.094Z] [hosting] uploads queued: 0
+[debug] [2023-11-27T07:00:18.094Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1701068418094}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[vue-http-course-fd7d3]: file upload complete 
+[debug] [2023-11-27T07:00:18.096Z] [hosting] deploy completed after 1131ms
+[debug] [2023-11-27T07:00:18.096Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "vue-http-course-fd7d3"
+    },
+    "version": "projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338"
+  }
+]
+[info] i  hosting[vue-http-course-fd7d3]: finalizing version... 
+[debug] [2023-11-27T07:00:18.100Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions/205b6128e60c0338 updateMask=status%2Cconfig
+[debug] [2023-11-27T07:00:18.100Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions/205b6128e60c0338 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-11-27T07:00:19.420Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions/205b6128e60c0338 200
+[debug] [2023-11-27T07:00:19.420Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/versions/205b6128e60c0338 {"name":"projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-11-27T07:00:16.261022Z","createUser":{"email":"patricia@zapp-studio.com"},"finalizeTime":"2023-11-27T07:00:19.181252Z","finalizeUser":{"email":"patricia@zapp-studio.com"}}
+[debug] [2023-11-27T07:00:19.420Z] [hosting] finalized version for vue-http-course-fd7d3:[object Object]
+[info] ✔  hosting[vue-http-course-fd7d3]: version finalized 
+[info] i  hosting[vue-http-course-fd7d3]: releasing new version... 
+[debug] [2023-11-27T07:00:19.421Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/channels/live/releases versionName=projects%2F204299967612%2Fsites%2Fvue-http-course-fd7d3%2Fversions%2F205b6128e60c0338
+[debug] [2023-11-27T07:00:19.421Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/channels/live/releases {}
+[debug] [2023-11-27T07:00:20.747Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/channels/live/releases 200
+[debug] [2023-11-27T07:00:20.747Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vue-http-course-fd7d3/channels/live/releases {"name":"projects/204299967612/sites/vue-http-course-fd7d3/channels/live/releases/1701068419830000","version":{"name":"projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-11-27T07:00:16.261022Z","createUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"},"finalizeTime":"2023-11-27T07:00:19.181252Z","finalizeUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"}},"type":"DEPLOY","releaseTime":"2023-11-27T07:00:19.830Z","releaseUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"}}
+[debug] [2023-11-27T07:00:20.747Z] [hosting] release: {"name":"projects/204299967612/sites/vue-http-course-fd7d3/channels/live/releases/1701068419830000","version":{"name":"projects/204299967612/sites/vue-http-course-fd7d3/versions/205b6128e60c0338","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-11-27T07:00:16.261022Z","createUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"},"finalizeTime":"2023-11-27T07:00:19.181252Z","finalizeUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"}},"type":"DEPLOY","releaseTime":"2023-11-27T07:00:19.830Z","releaseUser":{"email":"patricia@zapp-studio.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLgeyBd098z5lA5LmmDl1UVlUPR0xma-SVReS_2VnFMmg"}}
+[info] ✔  hosting[vue-http-course-fd7d3]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/vue-http-course-fd7d3/overview
+[info] Hosting URL: https://vue-http-course-fd7d3.web.app
+[debug] [2023-11-27T09:08:34.271Z] ----------------------------------------------------------------------
+[debug] [2023-11-27T09:08:34.272Z] Command:       /home/patri/.nvm/versions/node/v16.20.2/bin/node /home/patri/.nvm/versions/node/v16.20.2/bin/firebase init
+[debug] [2023-11-27T09:08:34.273Z] CLI Version:   12.9.1
+[debug] [2023-11-27T09:08:34.273Z] Platform:      linux
+[debug] [2023-11-27T09:08:34.273Z] Node Version:  v16.20.2
+[debug] [2023-11-27T09:08:34.273Z] Time:          Mon Nov 27 2023 10:08:34 GMT+0100 (hora estándar de Europa central)
+[debug] [2023-11-27T09:08:34.273Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-27T09:08:34.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-27T09:08:34.304Z] > authorizing via signed-in user (patricia@zapp-studio.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/patri/OneDrive/Zapp/Vue-course/Project/main-prj-01-starting-setup/main-prj-01-starting-setup
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
