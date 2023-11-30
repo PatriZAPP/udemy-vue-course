@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { ref, watch  } from 'vue';
+import { ref, watch, provide, onBeforeMount  } from 'vue';
 import UserData from './components/UserData.vue';
 
 export default {
@@ -45,10 +45,16 @@ setup() {
     uAge.value = 32;
   }
 
+  onBefoureMount(() => {
+    console.log('onBeforeMount')
+  })
+
+  provide('userAge', uAge);
+
   const setLastName = () => {
   lastName.value = lastNameInput.value.value;
 }
-  return { uAge, firstName, lastName, setAge: setNewAge, setLastName, lastNameInput };
+  return { firstName, lastName, setAge: setNewAge, setLastName, lastNameInput };
 }
 };
 </script>
