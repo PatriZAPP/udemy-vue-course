@@ -68,4 +68,5 @@ button:active {
 button.selected {
   background-color: #00006b;
   color: white;
-}</style>
+}
+</style>
